@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react'
-import mapMarker from "@iconify/icons-mdi/hospital";
+import mapMarker from "@iconify/icons-mdi/map-marker";
 
 import useStyles from './styles';
 

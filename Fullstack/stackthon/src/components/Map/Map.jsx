@@ -28,7 +28,7 @@ const Map = ({ data, center, zoom}) => {
             >
             {/* {markers} */}
             {data.map((ev, i) => {
-            return <LocationMarker lat={ev.lat} lng={ev.lon} key={i}  onClick={(setLocationInfo({name: ev.classname, address: ev.address}) )} />
+            return <LocationMarker lat={ev.lat} lng={ev.lon} key={i}  onClick={() => setLocationInfo({centername: ev.centername, address: ev.address})} />
             })}
            
             <LocationMarker lat={center.lat} lng={center.lng} 

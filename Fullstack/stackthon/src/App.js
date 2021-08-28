@@ -15,7 +15,7 @@ const App = () => {
     // const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        const URL = 'https://sheetlabs.com/NCOR/covidtestcentersinUS?state=NY'
+        const URL = 'https://sheetlabs.com/NCOR/covidtestcentersinUS'
         const getPlacesData = async () => {
             // setLoading(true)
             try {
@@ -43,7 +43,7 @@ const App = () => {
         <Header />
         <Grid container spacing={3} style={{width:'100%'}}>
         <Grid item xs={12} md={4}>
-            <List />
+            <List data={places} />
         </Grid>
         <Grid item xs={12} md={8}>
            <Map

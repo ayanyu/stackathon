@@ -15,6 +15,9 @@ export default makeStyles(() => ({
   },
   marker: {
     color: 'red'
+  },
+  box: {
+    backgroundColor: 'black', color: 'white', position: 'relative'
   }
 }));
 

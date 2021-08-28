@@ -6,19 +6,24 @@ import LocationOnIcon from '@material-ui/icons/LocationOn'
 
 // import PhoneIcon from '@material-ui/icons/'
 import useStyles from './styles';
-const PlaceDetails = ({place}) => {
+const PlaceDetails = ({places}) => {
     console.log('place')
     const classes = useStyles();
     return (
             <Card elevation={6}>
                 <CardMedia 
                 style={{ height: 350 }}
-                image={'https://mpng.subpng.com/20180430/ove/kisspng-clinic-medicine-health-care-clip-art-5ae6fbb055b1d4.194597271525087152351.jpg'}
-                title={place.name}
+                image={'https://cdn1.vectorstock.com/i/1000x1000/38/25/cartoon-hospital-building-emergency-clinic-vector-24613825.jpg'}
+                title={places.centername}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5">{place.name}</Typography>
-                    <Typography gutterBottom variant="h5">{place.address}</Typography>
+                    <Typography gutterBottom variant="h5" className={classes.color}>Name: {places.centername}</Typography>
+                    <Typography gutterBottom variant="h6">{places.address}</Typography>
+                    <Typography gutterBottom variant="h6">{places.city}</Typography>
+                    <Typography gutterBottom variant="h6">{places.state}</Typography>
+                    <Typography gutterBottom variant="h6">{places.url}</Typography>
+
+
                 </CardContent>
             </Card>
         

@@ -4,19 +4,19 @@ import PlaceDetails from "../PlaceDetails/PlaceDetails"
 
 import useStyles from './styles';
 
-const List = () => {
+const List = ({data}) => {
     const classes = useStyles();
     const [type, setType] =useState('clinic')
 
-    const places = [
-        {name: 'clinic 1' , image: 'https://mpng.subpng.com/20180430/ove/kisspng-clinic-medicine-health-care-clip-art-5ae6fbb055b1d4.194597271525087152351.jpg', address:'ssss', lat: "40.88464", lng: "-73.783813"},
-        {name: 'clinic 1'},
-        {name: 'clinic 1'},
-        {name: 'clinic 1'},
-        {name: 'clinic 1'},
-        {name: 'clinic 1'},
-        {name: 'clinic 1'}
-    ]
+    // const places = [
+    //     {name: 'clinic 1' , image: 'https://mpng.subpng.com/20180430/ove/kisspng-clinic-medicine-health-care-clip-art-5ae6fbb055b1d4.194597271525087152351.jpg', address:'ssss', lat: "40.88464", lng: "-73.783813"},
+    //     {name: 'clinic 1'},
+    //     {name: 'clinic 1'},
+    //     {name: 'clinic 1'},
+    //     {name: 'clinic 1'},
+    //     {name: 'clinic 1'},
+    //     {name: 'clinic 1'}
+    // ]
 
     return (
             <div className={classes.container}>
@@ -28,9 +28,9 @@ const List = () => {
                 </Select>
             </FormControl>
             <Grid container spacing={3} className={classes.list}>
-                {places?.map((place, i) => (
+                {data?.map((places, i) => (
                     <Grid item key={i} xs={12}>
-                        <PlaceDetails place={place} />
+                        <PlaceDetails places={places} />
                     </Grid>
                 ))}
             </Grid>
